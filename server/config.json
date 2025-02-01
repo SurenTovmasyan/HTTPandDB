@@ -1,0 +1,8 @@
+{ 
+    "client_host": "localhost", 
+    "client_port": 8080,
+    "user_name": "root",
+    "user_password": "root",
+    "db_host": "localhost",
+    "db_port": 3306
+ }

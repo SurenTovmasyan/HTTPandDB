@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/server.dir/main.cpp.o CMakeFiles/server.dir/src/Config.cpp.o CMakeFiles/server.dir/src/DataBase.cpp.o CMakeFiles/server.dir/home/surentovmasyan/Work/HTTP_and_DB/general/src/User.cpp.o CMakeFiles/server.dir/src/HTTP_Server.cpp.o -o server   -L/usr/lib/mysql  -Wl,-rpath,/usr/lib/mysql -lmysqlcppconn 

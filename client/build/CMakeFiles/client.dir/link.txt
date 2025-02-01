@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/client.dir/main.cpp.o CMakeFiles/client.dir/src/Config.cpp.o CMakeFiles/client.dir/home/surentovmasyan/Work/HTTP_and_DB/general/src/User.cpp.o CMakeFiles/client.dir/src/HTTP_Client.cpp.o -o client 

@@ -156,6 +156,8 @@ server: CMakeFiles/server.dir/src/DataBase.cpp.o
 server: CMakeFiles/server.dir/home/surentovmasyan/Work/HTTP_and_DB/general/src/User.cpp.o
 server: CMakeFiles/server.dir/src/HTTP_Server.cpp.o
 server: CMakeFiles/server.dir/build.make
+server: /usr/lib/x86_64-linux-gnu/libspdlog.so.1.12.0
+server: /usr/lib/x86_64-linux-gnu/libfmt.so.9.1.0
 server: CMakeFiles/server.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/home/surentovmasyan/Work/HTTP and DB/server/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable server"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server.dir/link.txt --verbose=$(VERBOSE)

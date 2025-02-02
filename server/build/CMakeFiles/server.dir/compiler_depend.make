@@ -576,6 +576,7 @@ CMakeFiles/server.dir/main.cpp.o: /home/surentovmasyan/Work/HTTP\ and\ DB/server
   /usr/include/c++/13/cassert \
   /usr/include/c++/13/cctype \
   /usr/include/c++/13/cerrno \
+  /usr/include/c++/13/chrono \
   /usr/include/c++/13/climits \
   /usr/include/c++/13/clocale \
   /usr/include/c++/13/cmath \
@@ -679,6 +680,8 @@ CMakeFiles/server.dir/main.cpp.o: /home/surentovmasyan/Work/HTTP\ and\ DB/server
   /usr/include/fcntl.h \
   /usr/include/features-time64.h \
   /usr/include/features.h \
+  /usr/include/fmt/core.h \
+  /usr/include/fmt/format.h \
   /usr/include/ifaddrs.h \
   /usr/include/inttypes.h \
   /usr/include/libintl.h \
@@ -750,6 +753,25 @@ CMakeFiles/server.dir/main.cpp.o: /home/surentovmasyan/Work/HTTP\ and\ DB/server
   /usr/include/rpc/netdb.h \
   /usr/include/sched.h \
   /usr/include/signal.h \
+  /usr/include/spdlog/common.h \
+  /usr/include/spdlog/details/backtracer.h \
+  /usr/include/spdlog/details/circular_q.h \
+  /usr/include/spdlog/details/console_globals.h \
+  /usr/include/spdlog/details/log_msg.h \
+  /usr/include/spdlog/details/log_msg_buffer.h \
+  /usr/include/spdlog/details/null_mutex.h \
+  /usr/include/spdlog/details/periodic_worker.h \
+  /usr/include/spdlog/details/registry.h \
+  /usr/include/spdlog/details/synchronous_factory.h \
+  /usr/include/spdlog/fmt/fmt.h \
+  /usr/include/spdlog/formatter.h \
+  /usr/include/spdlog/logger.h \
+  /usr/include/spdlog/sinks/ansicolor_sink.h \
+  /usr/include/spdlog/sinks/sink.h \
+  /usr/include/spdlog/sinks/stdout_color_sinks.h \
+  /usr/include/spdlog/spdlog.h \
+  /usr/include/spdlog/tweakme.h \
+  /usr/include/spdlog/version.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdint.h \
   /usr/include/stdio.h \
@@ -1344,6 +1366,7 @@ CMakeFiles/server.dir/src/DataBase.cpp.o: /home/surentovmasyan/Work/HTTP\ and\ D
   /usr/include/c++/13/algorithm \
   /usr/include/c++/13/any \
   /usr/include/c++/13/array \
+  /usr/include/c++/13/atomic \
   /usr/include/c++/13/backward/auto_ptr.h \
   /usr/include/c++/13/backward/binders.h \
   /usr/include/c++/13/bit \
@@ -1423,6 +1446,8 @@ CMakeFiles/server.dir/src/DataBase.cpp.o: /home/surentovmasyan/Work/HTTP\ and\ D
   /usr/include/c++/13/bits/sstream.tcc \
   /usr/include/c++/13/bits/std_abs.h \
   /usr/include/c++/13/bits/std_function.h \
+  /usr/include/c++/13/bits/std_mutex.h \
+  /usr/include/c++/13/bits/std_thread.h \
   /usr/include/c++/13/bits/stl_algo.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_bvector.h \
@@ -1448,7 +1473,9 @@ CMakeFiles/server.dir/src/DataBase.cpp.o: /home/surentovmasyan/Work/HTTP\ and\ D
   /usr/include/c++/13/bits/streambuf_iterator.h \
   /usr/include/c++/13/bits/string_view.tcc \
   /usr/include/c++/13/bits/stringfwd.h \
+  /usr/include/c++/13/bits/this_thread_sleep.h \
   /usr/include/c++/13/bits/uniform_int_dist.h \
+  /usr/include/c++/13/bits/unique_lock.h \
   /usr/include/c++/13/bits/unique_ptr.h \
   /usr/include/c++/13/bits/unordered_map.h \
   /usr/include/c++/13/bits/uses_allocator.h \
@@ -1462,10 +1489,12 @@ CMakeFiles/server.dir/src/DataBase.cpp.o: /home/surentovmasyan/Work/HTTP\ and\ D
   /usr/include/c++/13/cassert \
   /usr/include/c++/13/cctype \
   /usr/include/c++/13/cerrno \
+  /usr/include/c++/13/chrono \
   /usr/include/c++/13/clocale \
   /usr/include/c++/13/cmath \
   /usr/include/c++/13/codecvt \
   /usr/include/c++/13/compare \
+  /usr/include/c++/13/condition_variable \
   /usr/include/c++/13/cstddef \
   /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdio \
@@ -1500,6 +1529,7 @@ CMakeFiles/server.dir/src/DataBase.cpp.o: /home/surentovmasyan/Work/HTTP\ and\ D
   /usr/include/c++/13/locale \
   /usr/include/c++/13/map \
   /usr/include/c++/13/memory \
+  /usr/include/c++/13/mutex \
   /usr/include/c++/13/new \
   /usr/include/c++/13/numeric \
   /usr/include/c++/13/ostream \
@@ -1515,6 +1545,7 @@ CMakeFiles/server.dir/src/DataBase.cpp.o: /home/surentovmasyan/Work/HTTP\ and\ D
   /usr/include/c++/13/string \
   /usr/include/c++/13/string_view \
   /usr/include/c++/13/system_error \
+  /usr/include/c++/13/thread \
   /usr/include/c++/13/tr1/bessel_function.tcc \
   /usr/include/c++/13/tr1/beta_function.tcc \
   /usr/include/c++/13/tr1/ell_integral.tcc \
@@ -1553,6 +1584,8 @@ CMakeFiles/server.dir/src/DataBase.cpp.o: /home/surentovmasyan/Work/HTTP\ and\ D
   /usr/include/errno.h \
   /usr/include/features-time64.h \
   /usr/include/features.h \
+  /usr/include/fmt/core.h \
+  /usr/include/fmt/format.h \
   /usr/include/inttypes.h \
   /usr/include/libintl.h \
   /usr/include/linux/close_range.h \
@@ -1608,6 +1641,25 @@ CMakeFiles/server.dir/src/DataBase.cpp.o: /home/surentovmasyan/Work/HTTP\ and\ D
   /usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
   /usr/include/pthread.h \
   /usr/include/sched.h \
+  /usr/include/spdlog/common.h \
+  /usr/include/spdlog/details/backtracer.h \
+  /usr/include/spdlog/details/circular_q.h \
+  /usr/include/spdlog/details/console_globals.h \
+  /usr/include/spdlog/details/log_msg.h \
+  /usr/include/spdlog/details/log_msg_buffer.h \
+  /usr/include/spdlog/details/null_mutex.h \
+  /usr/include/spdlog/details/periodic_worker.h \
+  /usr/include/spdlog/details/registry.h \
+  /usr/include/spdlog/details/synchronous_factory.h \
+  /usr/include/spdlog/fmt/fmt.h \
+  /usr/include/spdlog/formatter.h \
+  /usr/include/spdlog/logger.h \
+  /usr/include/spdlog/sinks/ansicolor_sink.h \
+  /usr/include/spdlog/sinks/sink.h \
+  /usr/include/spdlog/sinks/stdout_color_sinks.h \
+  /usr/include/spdlog/spdlog.h \
+  /usr/include/spdlog/tweakme.h \
+  /usr/include/spdlog/version.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdint.h \
   /usr/include/stdio.h \
@@ -1937,6 +1989,7 @@ CMakeFiles/server.dir/src/HTTP_Server.cpp.o: /home/surentovmasyan/Work/HTTP\ and
   /usr/include/c++/13/cassert \
   /usr/include/c++/13/cctype \
   /usr/include/c++/13/cerrno \
+  /usr/include/c++/13/chrono \
   /usr/include/c++/13/climits \
   /usr/include/c++/13/clocale \
   /usr/include/c++/13/cmath \
@@ -2040,6 +2093,8 @@ CMakeFiles/server.dir/src/HTTP_Server.cpp.o: /home/surentovmasyan/Work/HTTP\ and
   /usr/include/fcntl.h \
   /usr/include/features-time64.h \
   /usr/include/features.h \
+  /usr/include/fmt/core.h \
+  /usr/include/fmt/format.h \
   /usr/include/ifaddrs.h \
   /usr/include/inttypes.h \
   /usr/include/libintl.h \
@@ -2111,6 +2166,25 @@ CMakeFiles/server.dir/src/HTTP_Server.cpp.o: /home/surentovmasyan/Work/HTTP\ and
   /usr/include/rpc/netdb.h \
   /usr/include/sched.h \
   /usr/include/signal.h \
+  /usr/include/spdlog/common.h \
+  /usr/include/spdlog/details/backtracer.h \
+  /usr/include/spdlog/details/circular_q.h \
+  /usr/include/spdlog/details/console_globals.h \
+  /usr/include/spdlog/details/log_msg.h \
+  /usr/include/spdlog/details/log_msg_buffer.h \
+  /usr/include/spdlog/details/null_mutex.h \
+  /usr/include/spdlog/details/periodic_worker.h \
+  /usr/include/spdlog/details/registry.h \
+  /usr/include/spdlog/details/synchronous_factory.h \
+  /usr/include/spdlog/fmt/fmt.h \
+  /usr/include/spdlog/formatter.h \
+  /usr/include/spdlog/logger.h \
+  /usr/include/spdlog/sinks/ansicolor_sink.h \
+  /usr/include/spdlog/sinks/sink.h \
+  /usr/include/spdlog/sinks/stdout_color_sinks.h \
+  /usr/include/spdlog/spdlog.h \
+  /usr/include/spdlog/tweakme.h \
+  /usr/include/spdlog/version.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdint.h \
   /usr/include/stdio.h \
@@ -2289,8 +2363,6 @@ CMakeFiles/server.dir/src/HTTP_Server.cpp.o: /home/surentovmasyan/Work/HTTP\ and
 
 /home/surentovmasyan/Work/HTTP\ and\ DB/server/src/HTTP_Server.cpp:
 
-/home/surentovmasyan/Work/HTTP\ and\ DB/server/src/DataBase.cpp:
-
 /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h:
@@ -2314,6 +2386,34 @@ CMakeFiles/server.dir/src/HTTP_Server.cpp.o: /home/surentovmasyan/Work/HTTP\ and
 /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/statx.h:
+
+/usr/include/x86_64-linux-gnu/bits/ss_flags.h:
+
+/usr/include/x86_64-linux-gnu/bits/sockaddr.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigthread.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigstksz.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigstack.h:
+
+/usr/include/x86_64-linux-gnu/bits/signum-generic.h:
+
+/usr/include/x86_64-linux-gnu/bits/signum-arch.h:
+
+/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h:
+
+/usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h:
+
+/usr/include/x86_64-linux-gnu/bits/siginfo-arch.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigevent-consts.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigcontext.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
 
 /usr/include/stdlib.h:
 
@@ -2403,8 +2503,6 @@ CMakeFiles/server.dir/src/HTTP_Server.cpp.o: /home/surentovmasyan/Work/HTTP\ and
 
 /usr/include/stdc-predef.h:
 
-/usr/include/x86_64-linux-gnu/bits/sigcontext.h:
-
 /usr/include/c++/13/bits/range_access.h:
 
 /usr/include/c++/13/tr1/exp_integral.tcc:
@@ -2436,8 +2534,6 @@ CMakeFiles/server.dir/src/HTTP_Server.cpp.o: /home/surentovmasyan/Work/HTTP\ and
 /usr/include/c++/13/pstl/glue_numeric_defs.h:
 
 /usr/include/c++/13/exception:
-
-/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h:
 
 /usr/include/c++/13/memory:
 
@@ -2512,6 +2608,8 @@ CMakeFiles/server.dir/src/HTTP_Server.cpp.o: /home/surentovmasyan/Work/HTTP\ and
 /usr/include/nlohmann/thirdparty/hedley/hedley.hpp:
 
 /home/surentovmasyan/Work/HTTP\ and\ DB/server/libs/cpp-httplib/httplib.h:
+
+/usr/include/c++/13/chrono:
 
 /usr/include/nlohmann/detail/meta/is_sax.hpp:
 
@@ -2593,8 +2691,6 @@ CMakeFiles/server.dir/src/HTTP_Server.cpp.o: /home/surentovmasyan/Work/HTTP\ and
 
 /usr/include/asm-generic/errno-base.h:
 
-/usr/include/c++/13/bits/stl_iterator_base_funcs.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h:
 
 /usr/include/c++/13/array:
@@ -2641,8 +2737,6 @@ CMakeFiles/server.dir/src/HTTP_Server.cpp.o: /home/surentovmasyan/Work/HTTP\ and
 
 /usr/include/c++/13/bits/stl_pair.h:
 
-/usr/include/x86_64-linux-gnu/bits/signum-arch.h:
-
 /usr/include/c++/13/bits/hashtable.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/error_t.h:
@@ -2659,19 +2753,19 @@ CMakeFiles/server.dir/src/HTTP_Server.cpp.o: /home/surentovmasyan/Work/HTTP\ and
 
 /usr/include/c++/13/bits/enable_special_members.h:
 
-/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
-
 /usr/include/c++/13/bits/stream_iterator.h:
 
 /usr/include/c++/13/iosfwd:
-
-/usr/include/x86_64-linux-gnu/bits/signum-generic.h:
 
 /usr/include/c++/13/bits/node_handle.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
 /usr/include/c++/13/bits/algorithmfwd.h:
+
+/usr/include/x86_64-linux-gnu/bits/socket.h:
+
+/usr/include/x86_64-linux-gnu/bits/long-double.h:
 
 /usr/include/c++/13/bits/concept_check.h:
 
@@ -2680,6 +2774,8 @@ CMakeFiles/server.dir/src/HTTP_Server.cpp.o: /home/surentovmasyan/Work/HTTP\ and
 /usr/include/c++/13/bits/codecvt.h:
 
 /usr/include/c++/13/bits/stl_tree.h:
+
+/usr/include/spdlog/logger.h:
 
 /usr/include/nlohmann/detail/macro_unscope.hpp:
 
@@ -2753,11 +2849,15 @@ CMakeFiles/server.dir/src/HTTP_Server.cpp.o: /home/surentovmasyan/Work/HTTP\ and
 
 /usr/include/c++/13/set:
 
+/usr/include/spdlog/details/log_msg.h:
+
 /usr/include/c++/13/bits/fs_fwd.h:
 
 /usr/include/c++/13/bits/memoryfwd.h:
 
 /usr/include/c++/13/bits/move.h:
+
+/usr/include/spdlog/sinks/stdout_color_sinks.h:
 
 /usr/include/c++/13/system_error:
 
@@ -2837,6 +2937,10 @@ CMakeFiles/server.dir/src/HTTP_Server.cpp.o: /home/surentovmasyan/Work/HTTP\ and
 
 /usr/include/nlohmann/detail/string_escape.hpp:
 
+/home/surentovmasyan/Work/HTTP\ and\ DB/server/src/DataBase.cpp:
+
+/usr/include/spdlog/formatter.h:
+
 /usr/include/x86_64-linux-gnu/bits/errno.h:
 
 /usr/include/c++/13/valarray:
@@ -2854,6 +2958,8 @@ CMakeFiles/server.dir/src/HTTP_Server.cpp.o: /home/surentovmasyan/Work/HTTP\ and
 /usr/include/c++/13/bits/stl_bvector.h:
 
 /usr/include/c++/13/bits/stl_construct.h:
+
+/usr/include/spdlog/details/synchronous_factory.h:
 
 /usr/include/c++/13/iostream:
 
@@ -2909,13 +3015,7 @@ CMakeFiles/server.dir/src/HTTP_Server.cpp.o: /home/surentovmasyan/Work/HTTP\ and
 
 /usr/include/nlohmann/detail/hash.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/long-double.h:
-
-/usr/include/x86_64-linux-gnu/bits/socket.h:
-
 /usr/include/c++/13/tr1/gamma.tcc:
-
-/usr/include/c++/13/ext/atomicity.h:
 
 /usr/include/c++/13/cctype:
 
@@ -2955,11 +3055,15 @@ CMakeFiles/server.dir/src/HTTP_Server.cpp.o: /home/surentovmasyan/Work/HTTP\ and
 
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
 
+/usr/include/spdlog/version.h:
+
 /usr/include/x86_64-linux-gnu/bits/fp-fast.h:
 
 /usr/include/boost/config/workaround.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/fp-logb.h:
+
+/usr/include/spdlog/details/periodic_worker.h:
 
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
@@ -2991,6 +3095,8 @@ CMakeFiles/server.dir/src/HTTP_Server.cpp.o: /home/surentovmasyan/Work/HTTP\ and
 
 /usr/include/x86_64-linux-gnu/bits/time.h:
 
+/usr/include/spdlog/details/log_msg_buffer.h:
+
 /usr/include/x86_64-linux-gnu/bits/stdint-least.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
@@ -3006,6 +3112,14 @@ CMakeFiles/server.dir/src/HTTP_Server.cpp.o: /home/surentovmasyan/Work/HTTP\ and
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
 
 /usr/include/x86_64-linux-gnu/bits/timex.h:
+
+/usr/include/x86_64-linux-gnu/bits/statx-generic.h:
+
+/usr/include/nlohmann/detail/exceptions.hpp:
+
+/usr/include/wchar.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
 /usr/include/c++/13/condition_variable:
 
@@ -3081,8 +3195,6 @@ CMakeFiles/server.dir/src/HTTP_Server.cpp.o: /home/surentovmasyan/Work/HTTP\ and
 
 /usr/include/c++/13/bits/regex_compiler.tcc:
 
-/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
-
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
 /usr/include/nlohmann/detail/iterators/iteration_proxy.hpp:
@@ -3102,6 +3214,8 @@ CMakeFiles/server.dir/src/HTTP_Server.cpp.o: /home/surentovmasyan/Work/HTTP\ and
 /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h:
 
 /usr/include/boost/smart_ptr/detail/sp_counted_base_gcc_atomic.hpp:
+
+/usr/include/fmt/format.h:
 
 /usr/include/x86_64-linux-gnu/asm/socket.h:
 
@@ -3141,6 +3255,10 @@ CMakeFiles/server.dir/src/HTTP_Server.cpp.o: /home/surentovmasyan/Work/HTTP\ and
 
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
+/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
+
+/usr/include/spdlog/details/backtracer.h:
+
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
 /usr/include/x86_64-linux-gnu/sys/single_threaded.h:
@@ -3169,15 +3287,13 @@ CMakeFiles/server.dir/src/HTTP_Server.cpp.o: /home/surentovmasyan/Work/HTTP\ and
 
 /home/surentovmasyan/Work/HTTP\ and\ DB/server/include/DataBase.h:
 
-/usr/include/x86_64-linux-gnu/bits/sigstksz.h:
-
 /usr/include/c++/13/bits/locale_facets.tcc:
 
 /usr/include/arpa/nameser.h:
 
-/usr/include/arpa/inet.h:
-
 /usr/include/x86_64-linux-gnu/bits/sigaction.h:
+
+/usr/include/arpa/inet.h:
 
 /usr/include/boost/scoped_ptr.hpp:
 
@@ -3194,6 +3310,8 @@ CMakeFiles/server.dir/src/HTTP_Server.cpp.o: /home/surentovmasyan/Work/HTTP\ and
 /usr/include/c++/13/bits/stl_relops.h:
 
 /usr/include/asm-generic/sockios.h:
+
+/usr/include/spdlog/fmt/fmt.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
@@ -3239,9 +3357,9 @@ CMakeFiles/server.dir/src/HTTP_Server.cpp.o: /home/surentovmasyan/Work/HTTP\ and
 
 /usr/include/boost/current_function.hpp:
 
-/usr/include/boost/smart_ptr/bad_weak_ptr.hpp:
-
 /usr/include/boost/smart_ptr/detail/requires_cxx11.hpp:
+
+/usr/include/spdlog/tweakme.h:
 
 /usr/include/c++/13/tr1/beta_function.tcc:
 
@@ -3251,6 +3369,10 @@ CMakeFiles/server.dir/src/HTTP_Server.cpp.o: /home/surentovmasyan/Work/HTTP\ and
 
 /usr/include/boost/smart_ptr/detail/sp_convertible.hpp:
 
+/usr/include/c++/13/bits/stl_iterator_base_funcs.h:
+
+/usr/include/spdlog/sinks/ansicolor_sink.h:
+
 /usr/include/boost/smart_ptr/detail/sp_counted_impl.hpp:
 
 /usr/include/boost/smart_ptr/detail/sp_disable_deprecated.hpp:
@@ -3258,8 +3380,6 @@ CMakeFiles/server.dir/src/HTTP_Server.cpp.o: /home/surentovmasyan/Work/HTTP\ and
 /usr/include/boost/smart_ptr/detail/sp_has_sync_intrinsics.hpp:
 
 /usr/include/boost/smart_ptr/detail/sp_noexcept.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/sigstack.h:
 
 /usr/include/boost/smart_ptr/detail/sp_typeinfo_.hpp:
 
@@ -3315,11 +3435,11 @@ CMakeFiles/server.dir/src/HTTP_Server.cpp.o: /home/surentovmasyan/Work/HTTP\ and
 
 /usr/include/c++/13/bits/stl_stack.h:
 
+/usr/include/x86_64-linux-gnu/bits/stat.h:
+
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
 /usr/include/c++/13/bits/exception_ptr.h:
-
-/usr/include/x86_64-linux-gnu/bits/stat.h:
 
 /usr/include/c++/13/bits/this_thread_sleep.h:
 
@@ -3369,6 +3489,8 @@ CMakeFiles/server.dir/src/HTTP_Server.cpp.o: /home/surentovmasyan/Work/HTTP\ and
 
 /usr/include/cppconn/warning.h:
 
+/usr/include/fmt/core.h:
+
 /usr/include/ifaddrs.h:
 
 /usr/include/linux/close_range.h:
@@ -3381,11 +3503,27 @@ CMakeFiles/server.dir/src/HTTP_Server.cpp.o: /home/surentovmasyan/Work/HTTP\ and
 
 /usr/include/x86_64-linux-gnu/bits/mman-linux.h:
 
+/usr/include/boost/smart_ptr/bad_weak_ptr.hpp:
+
+/usr/include/spdlog/common.h:
+
+/usr/include/spdlog/details/circular_q.h:
+
+/usr/include/spdlog/details/console_globals.h:
+
+/usr/include/spdlog/details/null_mutex.h:
+
+/usr/include/spdlog/details/registry.h:
+
+/usr/include/c++/13/ext/atomicity.h:
+
+/usr/include/spdlog/sinks/sink.h:
+
+/usr/include/spdlog/spdlog.h:
+
 /usr/include/boost/exception/exception.hpp:
 
 /usr/include/unistd.h:
-
-/usr/include/x86_64-linux-gnu/bits/statx.h:
 
 /usr/include/x86_64-linux-gnu/asm/bitsperlong.h:
 
@@ -3404,23 +3542,3 @@ CMakeFiles/server.dir/src/HTTP_Server.cpp.o: /home/surentovmasyan/Work/HTTP\ and
 /usr/include/x86_64-linux-gnu/bits/local_lim.h:
 
 /usr/include/x86_64-linux-gnu/bits/mman-shared.h:
-
-/usr/include/x86_64-linux-gnu/bits/sigevent-consts.h:
-
-/usr/include/x86_64-linux-gnu/bits/siginfo-arch.h:
-
-/usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h:
-
-/usr/include/x86_64-linux-gnu/bits/sigthread.h:
-
-/usr/include/x86_64-linux-gnu/bits/sockaddr.h:
-
-/usr/include/x86_64-linux-gnu/bits/ss_flags.h:
-
-/usr/include/nlohmann/detail/exceptions.hpp:
-
-/usr/include/wchar.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
-
-/usr/include/x86_64-linux-gnu/bits/statx-generic.h:

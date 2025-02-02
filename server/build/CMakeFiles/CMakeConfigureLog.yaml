@@ -529,3 +529,44 @@ events:
       
       
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "/usr/share/cmake-3.28/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/spdlog/spdlogConfig.cmake:40 (find_package)"
+      - "CMakeLists.txt:15 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/home/surentovmasyan/Work/HTTP and DB/server/build/CMakeFiles/CMakeScratch/TryCompile-FZhdfc"
+      binary: "/home/surentovmasyan/Work/HTTP and DB/server/build/CMakeFiles/CMakeScratch/TryCompile-FZhdfc"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/home/surentovmasyan/Work/HTTP and DB/server/build/CMakeFiles/CMakeScratch/TryCompile-FZhdfc'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_97c5e/fast
+        gmake[1]: вход в каталог «/home/surentovmasyan/Work/HTTP and DB/server/build/CMakeFiles/CMakeScratch/TryCompile-FZhdfc»
+        /usr/bin/gmake  -f CMakeFiles/cmTC_97c5e.dir/build.make CMakeFiles/cmTC_97c5e.dir/build
+        gmake[2]: вход в каталог «/home/surentovmasyan/Work/HTTP and DB/server/build/CMakeFiles/CMakeScratch/TryCompile-FZhdfc»
+        Building C object CMakeFiles/cmTC_97c5e.dir/src.c.o
+        /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_97c5e.dir/src.c.o -c "/home/surentovmasyan/Work/HTTP and DB/server/build/CMakeFiles/CMakeScratch/TryCompile-FZhdfc/src.c"
+        Linking C executable cmTC_97c5e
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_97c5e.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_97c5e.dir/src.c.o -o cmTC_97c5e 
+        gmake[2]: выход из каталога «/home/surentovmasyan/Work/HTTP and DB/server/build/CMakeFiles/CMakeScratch/TryCompile-FZhdfc»
+        gmake[1]: выход из каталога «/home/surentovmasyan/Work/HTTP and DB/server/build/CMakeFiles/CMakeScratch/TryCompile-FZhdfc»
+        
+      exitCode: 0
+...

@@ -57,5 +57,5 @@ string User::get_privilege() const{
 }
 
 string User::to_string(){
-    return "User N" + __cxx11::to_string(id) + " - N: " + name + ", P: " + password + ", E: " + email + ", Priv: " + privilege +"\n";
+    return "User N" + __cxx11::to_string(id) + " - N: " + name + ", P: " + password + ", E: " + email + ", Priv: " + privilege + ".";
 }

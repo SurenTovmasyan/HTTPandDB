@@ -3,30 +3,29 @@
 Server HTTP_Server::server;
 Config HTTP_Server::config;
 DataBase HTTP_Server::db;
+shared_ptr<spdlog::logger> HTTP_Server::logger;
 
 void HTTP_Server::start(){
-    cout << "Starting server" << endl;
-    cout << "Getting configuration instance" << endl;
+    logger = spdlog::stdout_color_mt("server");
+    spdlog::set_pattern("%^[%Y-%m-%d %H:%M:%S] [%l] %v%$");
+    logger->info("Starting server.");
+    logger->info("Getting configuration instance.");
     config = Config::get_instance();
 
-    cout << "Connnecting to DB" << endl;
-    try{
-        db = DataBase::get_instance(config);
-    } catch (runtime_error &ex){
-        cout << "Error: " << ex.what() << endl;
-    }
-    cout << "Connected to DB successfully" << endl;
+    logger->info("Connnecting to DB server.");
+    db = DataBase::get_instance(config);
+    logger->info("Connected to DB successfully.");
 
     bind_points();
 
-    cout << "Listening to clients" << endl << endl;
+    logger->info("Listening to clients.");
     server.listen(config.client_host, config.client_port);
 }
 
 void HTTP_Server::stop(){
-    cout << "Stoping server" << endl;
+    logger->info("Stoping server.");
     server.stop();
-    cout << "Server stopped successfully!" << endl;
+    logger->critical("Server stopped successfully.");
 }
 
 void HTTP_Server::bind_points(){
@@ -40,9 +39,10 @@ void HTTP_Server::check_user(const Request &req, Response &res){
     User temp("NONE");
     string name = req.get_param_value("name");
     string password = req.get_param_value("password");
-    cout << "Got request of checking user N:" << name << ", P:" << password << endl;
+    logger->info("Got request of checking user N:" + name + ", P:" + password + ".");
 
     vector<User> users = db.get_users();
+    logger->info("Getting users list.");
     bool found_one = false;
     for (User user :users){
         if(user.get_name() == name){
@@ -55,46 +55,50 @@ void HTTP_Server::check_user(const Request &req, Response &res){
     }
 
     if(found_one){
-        cout << "Found user with same name and password" << endl;
+        logger->info("Found user with same name and password.");
     }
     else{
-        cout << "Didn't found user with same name and password" << endl;
+        logger->error("Didn't found user with same name and password.");
     }
         
     json j;
     j["user"] = temp;
     res.set_content(j.dump(), "application/json");
-    cout << "Sent response" << endl;
+    logger->info("Sent response.");
 }
 
 void HTTP_Server::get_users(const Request &req, Response &res){
-    cout << "Got request of getting users"<< endl;
+    logger->info("Got request of getting users.");
     json j;
-    cout << "Getting users from DB" << endl;
+    logger->info("Getting users from DB.");
     j["users"] = db.get_users();
 
-    cout << "Sending JSON file with users" << endl;
+    logger->info("Sending JSON file with users.");
     res.set_content(j.dump(), "application/json");
 }
 
 void HTTP_Server::add_user(const Request &req, Response &res){
-    cout << "Got request of adding an user" << endl;
+    logger->info("Got request of adding an user.");
     json j = json::parse(req.body);
     User new_user = j["user"];
-    cout << new_user.to_string();
+    logger->info(new_user.to_string());
     try{
         db.add_user(new_user);
         res.status = 200;
     } catch(SQLException& ex){
-        cout << "DB error: " << ex.what();
+        logger->error("DB error: " + string(ex.what()) + ".");
         res.set_content(ex.what(), "text/plain");
         res.status = 500;
+    } catch(invalid_argument& ex){
+        logger->error("Invalid name(already used).");
+        res.set_content(ex.what(), "text/plain");
+        res.status = 400;
     }
-    cout << "User added to DB" << endl;
+    logger->info("User added to DB.");
 }
 
 void HTTP_Server::delete_user(const Request &req, Response &res){
-    cout << "Got request of deleting user" << endl;
+    logger->info("Got request of deleting an user.");
     json j = json::parse(req.body);
     string way = j["way"];
     if(way == "id"){
@@ -103,7 +107,8 @@ void HTTP_Server::delete_user(const Request &req, Response &res){
             db.delete_user(id);
             res.status = 200;
         } catch(SQLException ex){
-            cout << "DB error: " << ex.what();
+            logger->error("DB error: " + string(ex.what()) + ".");
+            res.set_content(ex.what(), "text/plain");
             res.status = 500;
         }
     }
@@ -113,10 +118,10 @@ void HTTP_Server::delete_user(const Request &req, Response &res){
             db.delete_user(name);
             res.status = 200;
         } catch(SQLException& ex){
-            cout << "DB error: " << ex.what();
+            logger->error("DB error: " + string(ex.what()) + ".");
             res.set_content(ex.what(), "text/plain");
             res.status = 500;
         }
     }
-    cout << "User deleted from DB" << endl;
+    logger->info("User deleted from DB.");
 }

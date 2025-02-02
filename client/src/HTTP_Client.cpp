@@ -115,6 +115,10 @@ void HTTP_Client::create_user(){
     if(res && res->status == 200){
         cout << "User added successfully!" << endl << endl;
     }
+    else if(res && res->status == 400){
+        cout << res->body << endl << endl;
+        create_user();
+    }
     else cout << "Something has gone wrong in server..." << endl << endl;
 }
 
@@ -124,9 +128,9 @@ void HTTP_Client::get_users(){
     json j = json::parse(res->body);
     vector<User> users = j["users"];
     for (User user : users){
-        cout << '\t' << user.to_string();
+        cout << '\t' << user.to_string() << endl;
     }
-    cout << "Count of users: " << users.size() << endl << endl;
+    cout << "Count of users: " << users.size() << endl;
 }
 
 void HTTP_Client::to_main_page(){
@@ -193,7 +197,7 @@ void HTTP_Client::to_main_page(){
 
 void HTTP_Client::show_user_info(){
     cout << "The authorizied user information is below:" << endl << endl;
-    cout << "    " << working_user.to_string();
+    cout << "    " << working_user.to_string() << endl;
 }
 
 void HTTP_Client::delete_user(){

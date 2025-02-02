@@ -578,6 +578,7 @@ CMakeFiles/server.dir/main.cpp.o
  /usr/include/c++/13/cassert
  /usr/include/c++/13/cctype
  /usr/include/c++/13/cerrno
+ /usr/include/c++/13/chrono
  /usr/include/c++/13/climits
  /usr/include/c++/13/clocale
  /usr/include/c++/13/cmath
@@ -681,6 +682,8 @@ CMakeFiles/server.dir/main.cpp.o
  /usr/include/fcntl.h
  /usr/include/features-time64.h
  /usr/include/features.h
+ /usr/include/fmt/core.h
+ /usr/include/fmt/format.h
  /usr/include/ifaddrs.h
  /usr/include/inttypes.h
  /usr/include/libintl.h
@@ -752,6 +755,25 @@ CMakeFiles/server.dir/main.cpp.o
  /usr/include/rpc/netdb.h
  /usr/include/sched.h
  /usr/include/signal.h
+ /usr/include/spdlog/common.h
+ /usr/include/spdlog/details/backtracer.h
+ /usr/include/spdlog/details/circular_q.h
+ /usr/include/spdlog/details/console_globals.h
+ /usr/include/spdlog/details/log_msg.h
+ /usr/include/spdlog/details/log_msg_buffer.h
+ /usr/include/spdlog/details/null_mutex.h
+ /usr/include/spdlog/details/periodic_worker.h
+ /usr/include/spdlog/details/registry.h
+ /usr/include/spdlog/details/synchronous_factory.h
+ /usr/include/spdlog/fmt/fmt.h
+ /usr/include/spdlog/formatter.h
+ /usr/include/spdlog/logger.h
+ /usr/include/spdlog/sinks/ansicolor_sink.h
+ /usr/include/spdlog/sinks/sink.h
+ /usr/include/spdlog/sinks/stdout_color_sinks.h
+ /usr/include/spdlog/spdlog.h
+ /usr/include/spdlog/tweakme.h
+ /usr/include/spdlog/version.h
  /usr/include/stdc-predef.h
  /usr/include/stdint.h
  /usr/include/stdio.h
@@ -1348,6 +1370,7 @@ CMakeFiles/server.dir/src/DataBase.cpp.o
  /usr/include/c++/13/algorithm
  /usr/include/c++/13/any
  /usr/include/c++/13/array
+ /usr/include/c++/13/atomic
  /usr/include/c++/13/backward/auto_ptr.h
  /usr/include/c++/13/backward/binders.h
  /usr/include/c++/13/bit
@@ -1427,6 +1450,8 @@ CMakeFiles/server.dir/src/DataBase.cpp.o
  /usr/include/c++/13/bits/sstream.tcc
  /usr/include/c++/13/bits/std_abs.h
  /usr/include/c++/13/bits/std_function.h
+ /usr/include/c++/13/bits/std_mutex.h
+ /usr/include/c++/13/bits/std_thread.h
  /usr/include/c++/13/bits/stl_algo.h
  /usr/include/c++/13/bits/stl_algobase.h
  /usr/include/c++/13/bits/stl_bvector.h
@@ -1452,7 +1477,9 @@ CMakeFiles/server.dir/src/DataBase.cpp.o
  /usr/include/c++/13/bits/streambuf_iterator.h
  /usr/include/c++/13/bits/string_view.tcc
  /usr/include/c++/13/bits/stringfwd.h
+ /usr/include/c++/13/bits/this_thread_sleep.h
  /usr/include/c++/13/bits/uniform_int_dist.h
+ /usr/include/c++/13/bits/unique_lock.h
  /usr/include/c++/13/bits/unique_ptr.h
  /usr/include/c++/13/bits/unordered_map.h
  /usr/include/c++/13/bits/uses_allocator.h
@@ -1466,10 +1493,12 @@ CMakeFiles/server.dir/src/DataBase.cpp.o
  /usr/include/c++/13/cassert
  /usr/include/c++/13/cctype
  /usr/include/c++/13/cerrno
+ /usr/include/c++/13/chrono
  /usr/include/c++/13/clocale
  /usr/include/c++/13/cmath
  /usr/include/c++/13/codecvt
  /usr/include/c++/13/compare
+ /usr/include/c++/13/condition_variable
  /usr/include/c++/13/cstddef
  /usr/include/c++/13/cstdint
  /usr/include/c++/13/cstdio
@@ -1504,6 +1533,7 @@ CMakeFiles/server.dir/src/DataBase.cpp.o
  /usr/include/c++/13/locale
  /usr/include/c++/13/map
  /usr/include/c++/13/memory
+ /usr/include/c++/13/mutex
  /usr/include/c++/13/new
  /usr/include/c++/13/numeric
  /usr/include/c++/13/ostream
@@ -1519,6 +1549,7 @@ CMakeFiles/server.dir/src/DataBase.cpp.o
  /usr/include/c++/13/string
  /usr/include/c++/13/string_view
  /usr/include/c++/13/system_error
+ /usr/include/c++/13/thread
  /usr/include/c++/13/tr1/bessel_function.tcc
  /usr/include/c++/13/tr1/beta_function.tcc
  /usr/include/c++/13/tr1/ell_integral.tcc
@@ -1557,6 +1588,8 @@ CMakeFiles/server.dir/src/DataBase.cpp.o
  /usr/include/errno.h
  /usr/include/features-time64.h
  /usr/include/features.h
+ /usr/include/fmt/core.h
+ /usr/include/fmt/format.h
  /usr/include/inttypes.h
  /usr/include/libintl.h
  /usr/include/linux/close_range.h
@@ -1612,6 +1645,25 @@ CMakeFiles/server.dir/src/DataBase.cpp.o
  /usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp
  /usr/include/pthread.h
  /usr/include/sched.h
+ /usr/include/spdlog/common.h
+ /usr/include/spdlog/details/backtracer.h
+ /usr/include/spdlog/details/circular_q.h
+ /usr/include/spdlog/details/console_globals.h
+ /usr/include/spdlog/details/log_msg.h
+ /usr/include/spdlog/details/log_msg_buffer.h
+ /usr/include/spdlog/details/null_mutex.h
+ /usr/include/spdlog/details/periodic_worker.h
+ /usr/include/spdlog/details/registry.h
+ /usr/include/spdlog/details/synchronous_factory.h
+ /usr/include/spdlog/fmt/fmt.h
+ /usr/include/spdlog/formatter.h
+ /usr/include/spdlog/logger.h
+ /usr/include/spdlog/sinks/ansicolor_sink.h
+ /usr/include/spdlog/sinks/sink.h
+ /usr/include/spdlog/sinks/stdout_color_sinks.h
+ /usr/include/spdlog/spdlog.h
+ /usr/include/spdlog/tweakme.h
+ /usr/include/spdlog/version.h
  /usr/include/stdc-predef.h
  /usr/include/stdint.h
  /usr/include/stdio.h
@@ -1942,6 +1994,7 @@ CMakeFiles/server.dir/src/HTTP_Server.cpp.o
  /usr/include/c++/13/cassert
  /usr/include/c++/13/cctype
  /usr/include/c++/13/cerrno
+ /usr/include/c++/13/chrono
  /usr/include/c++/13/climits
  /usr/include/c++/13/clocale
  /usr/include/c++/13/cmath
@@ -2045,6 +2098,8 @@ CMakeFiles/server.dir/src/HTTP_Server.cpp.o
  /usr/include/fcntl.h
  /usr/include/features-time64.h
  /usr/include/features.h
+ /usr/include/fmt/core.h
+ /usr/include/fmt/format.h
  /usr/include/ifaddrs.h
  /usr/include/inttypes.h
  /usr/include/libintl.h
@@ -2116,6 +2171,25 @@ CMakeFiles/server.dir/src/HTTP_Server.cpp.o
  /usr/include/rpc/netdb.h
  /usr/include/sched.h
  /usr/include/signal.h
+ /usr/include/spdlog/common.h
+ /usr/include/spdlog/details/backtracer.h
+ /usr/include/spdlog/details/circular_q.h
+ /usr/include/spdlog/details/console_globals.h
+ /usr/include/spdlog/details/log_msg.h
+ /usr/include/spdlog/details/log_msg_buffer.h
+ /usr/include/spdlog/details/null_mutex.h
+ /usr/include/spdlog/details/periodic_worker.h
+ /usr/include/spdlog/details/registry.h
+ /usr/include/spdlog/details/synchronous_factory.h
+ /usr/include/spdlog/fmt/fmt.h
+ /usr/include/spdlog/formatter.h
+ /usr/include/spdlog/logger.h
+ /usr/include/spdlog/sinks/ansicolor_sink.h
+ /usr/include/spdlog/sinks/sink.h
+ /usr/include/spdlog/sinks/stdout_color_sinks.h
+ /usr/include/spdlog/spdlog.h
+ /usr/include/spdlog/tweakme.h
+ /usr/include/spdlog/version.h
  /usr/include/stdc-predef.h
  /usr/include/stdint.h
  /usr/include/stdio.h

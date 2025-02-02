@@ -12,5 +12,7 @@ link_directories(/usr/lib/mysql)
 add_executable(${PROJECT_NAME} ${SOURCES})
 
 find_package(nlohmann_json CONFIG REQUIRED)
+find_package(spdlog REQUIRED)
 
-target_link_libraries(server mysqlcppconn)
+target_link_libraries(${PROJECT_NAME} mysqlcppconn)
+target_link_libraries(${PROJECT_NAME} spdlog::spdlog)

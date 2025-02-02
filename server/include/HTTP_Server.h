@@ -10,6 +10,8 @@
 #include <vector>
 #include "Config.h"
 #include "DataBase.h"
+#include "spdlog/spdlog.h"
+#include "spdlog/sinks/stdout_color_sinks.h"
 
 using json = nlohmann::json;
 using namespace std;
@@ -25,6 +27,7 @@ public:
 private:
     static Server server;
     static Config config;
+    static shared_ptr<spdlog::logger> logger;
     static DataBase db;
 
     void bind_points();
